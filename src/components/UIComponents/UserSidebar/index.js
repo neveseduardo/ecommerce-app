@@ -3,7 +3,7 @@ import SidebarItem from './SidebarItem.vue'
 
 const SidebarStore = {
     showSidebar: false,
-    userLinks: [],
+    sidebarLinks: [],
     isMinimized: false,
     displaySidebar(value) {
         this.showSidebar = value
@@ -27,8 +27,8 @@ const SidebarStore = {
 const SidebarPlugin = {
 
     install(Vue, options) {
-        if (options && options.userLinks) {
-            SidebarStore.userLinks = options.userLinks
+        if (options && options.sidebarLinks) {
+            SidebarStore.sidebarLinks = options.sidebarLinks
         }
         Vue.mixin({
             data() {

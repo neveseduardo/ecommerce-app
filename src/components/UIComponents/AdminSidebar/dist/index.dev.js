@@ -11,9 +11,9 @@ var _SidebarItem = _interopRequireDefault(require("./SidebarItem.vue"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var SidebarStore = {
+var AdminSidebarStore = {
   showSidebar: false,
-  sidebarLinks: [],
+  adminSidebarLinks: [],
   isMinimized: false,
   displaySidebar: function displaySidebar(value) {
     this.showSidebar = value;
@@ -33,25 +33,25 @@ var SidebarStore = {
 };
 var SidebarPlugin = {
   install: function install(Vue, options) {
-    if (options && options.sidebarLinks) {
-      SidebarStore.sidebarLinks = options.sidebarLinks;
+    if (options && options.adminSidebarLinks) {
+      AdminSidebarStore.adminSidebarLinks = options.adminSidebarLinks;
     }
 
     Vue.mixin({
       data: function data() {
         return {
-          sidebarStore: SidebarStore
+          AdminsidebarStore: AdminSidebarStore
         };
       }
     });
-    Vue.prototype.$sidebar = SidebarStore;
-    Object.defineProperty(Vue.prototype, '$sidebar', {
+    Vue.prototype.$adminSidebar = AdminSidebarStore;
+    Object.defineProperty(Vue.prototype, '$adminSidebar', {
       get: function get() {
-        return this.$root.sidebarStore;
+        return this.$root.AdminsidebarStore;
       }
     });
-    Vue.component('side-bar', _SideBar["default"]);
-    Vue.component('sidebar-item', _SidebarItem["default"]);
+    Vue.component('admin-side-bar', _SideBar["default"]);
+    Vue.component('admin-sidebar-item', _SidebarItem["default"]);
   }
 };
 var _default = SidebarPlugin;

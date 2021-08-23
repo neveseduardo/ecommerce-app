@@ -6,20 +6,24 @@ import ElementUI from 'element-ui'
 import locale from 'element-ui/lib/locale/lang/pt-br'
 import VueTheMask from 'vue-the-mask'
 import money from 'v-money'
-// import UserSidebar from '@/components/UIComponents/UserSidebar'
-// import AdminSidebar from '@/components/UIComponents/AdminSidebar'
+
+// sidebar plugin
+import SideBar from "@/components/UIComponents/UserSidebar";
+import sidebarLinks from "@/userLinks";
+import AdminSidebar from "@/components/UIComponents/AdminSidebar";
+import adminSidebarLinks from "@/adminLinks";
+
 import initProgress from '@/progressbar'
 import routes from '@/routes'
 import './assets/scss/app.scss'
 import 'element-ui/lib/theme-chalk/index.css'
 import { methods } from '@/utils/methods'
-import userLinks from './userLinks'
-import adminLinks from './adminLinks'
+
 
 Vue.mixin({ methods: methods })
 Vue.use(VueRouter)
-// Vue.use(UserSidebar, { userLinks: userLinks })
-// Vue.use(AdminSidebar, { adminLinks: adminLinks })
+Vue.use(SideBar, { sidebarLinks: sidebarLinks });
+Vue.use(AdminSidebar, { adminSidebarLinks: adminSidebarLinks });
 Vue.use(ElementUI, { locale })
 Vue.use(VueTheMask)
 Vue.use(money, { precision: 4 })

@@ -23,7 +23,7 @@
             <ul class="nav">
                 <slot name="links">
                     <sidebar-item
-                        v-for="(link, index) in userLinks"
+                        v-for="(link, index) in sidebarLinks"
                         :key="link.name + index"
                         :link="link"
                     >
@@ -78,7 +78,7 @@ export default {
             default: 'https://www.gravatar.com/avatar/94d093eda664addd6e450d7e9881bcad?s=32&d=identicon&r=PG',
             description: 'Sidebar Logo',
         },
-        userLinks: {
+        sidebarLinks: {
             type: Array,
             default: () => [],
             description:

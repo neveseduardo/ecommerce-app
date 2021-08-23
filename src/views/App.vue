@@ -1,14 +1,13 @@
 <template>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla alias
-    pariatur consequatur et expedita asperiores nesciunt iure tempore iusto id
-    dicta, fugiat cupiditate autem totam praesentium harum modi fuga
-    accusantium?
-  </p>
+    <div :class="{ 'nav-open': $sidebar.showSidebar || $adminSidebar.showSidebar }">
+        <router-view name="header"></router-view>
+        <transition name="fade" mode="out-in">
+            <router-view></router-view>
+        </transition>
+        <router-view name="footer"></router-view>
+    </div>
 </template>
 
 <script>
+export default {}
 </script>
-
-<style>
-</style>

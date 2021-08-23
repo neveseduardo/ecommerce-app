@@ -1,9 +1,9 @@
 import Sidebar from './SideBar.vue'
 import SidebarItem from './SidebarItem.vue'
 
-const SidebarStore = {
+const AdminSidebarStore = {
     showSidebar: false,
-    adminLinks: [],
+    adminSidebarLinks: [],
     isMinimized: false,
     displaySidebar(value) {
         this.showSidebar = value
@@ -27,25 +27,25 @@ const SidebarStore = {
 const SidebarPlugin = {
 
     install(Vue, options) {
-        if (options && options.adminLinks) {
-            SidebarStore.adminLinks = options.adminLinks
+        if (options && options.adminSidebarLinks) {
+            AdminSidebarStore.adminSidebarLinks = options.adminSidebarLinks
         }
         Vue.mixin({
             data() {
                 return {
-                    sidebarStore: SidebarStore
+                    AdminsidebarStore: AdminSidebarStore
                 }
             }
         })
 
-        Vue.prototype.$sidebar = SidebarStore
-        Object.defineProperty(Vue.prototype, '$sidebar', {
+        Vue.prototype.$adminSidebar = AdminSidebarStore
+        Object.defineProperty(Vue.prototype, '$adminSidebar', {
             get() {
-                return this.$root.sidebarStore
+                return this.$root.AdminsidebarStore
             }
         })
-        Vue.component('side-bar', Sidebar)
-        Vue.component('sidebar-item', SidebarItem)
+        Vue.component('admin-side-bar', Sidebar)
+        Vue.component('admin-sidebar-item', SidebarItem)
     }
 }
 
