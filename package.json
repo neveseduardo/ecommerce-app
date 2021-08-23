@@ -3,21 +3,41 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "element-ui": "^2.15.5",
+    "moment": "^2.29.1",
+    "nprogress": "^0.2.0",
+    "pdfmake": "^0.2.2",
+    "perfect-scrollbar": "^1.5.2",
+    "v-money": "^0.8.1",
+    "vue": "^2.6.11",
+    "vue-advanced-cropper": "^1.8.2",
+    "vue-clickaway": "^2.2.2",
+    "vue-loading-overlay": "^4.0.3",
+    "vue-router": "^3.5.2",
+    "vue-the-mask": "^0.11.1",
+    "vue2-transitions": "^0.3.0",
+    "vuex": "^3.6.2",
+    "xlsx": "^0.17.1"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.14.5",
+    "@babel/plugin-proposal-optional-chaining": "^7.14.5",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "node-sass": "^6.0.1",
+    "sass-loader": "^10.2.0",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {

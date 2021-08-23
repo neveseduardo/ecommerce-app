@@ -1,24 +1,16 @@
-# ecommerce-app
+# ECOMMERCE-APP
 
-## Project setup
-```
-yarn install
-```
+> Projeto de construção de um aplicativo ecommerce com vuejs
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## Build Setup
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### install dependencies
+`npm install`
+### serve with hot reload at localhost:8080
+`npm run dev`
+### build for production with minification
+`npm run build`
+### run unit tests
+`npm run unit`
+### run and watch unit tests
+`npm run unit:watch`
