@@ -7,6 +7,10 @@ import locale from 'element-ui/lib/locale/lang/pt-br'
 import VueTheMask from 'vue-the-mask'
 import money from 'v-money'
 
+// fontwesome
+import '@fortawesome/fontawesome-free/css/all.css'
+import '@fortawesome/fontawesome-free/js/all.js'
+
 // sidebar plugin
 import SideBar from "@/components/UIComponents/UserSidebar";
 import sidebarLinks from "@/userLinks";
