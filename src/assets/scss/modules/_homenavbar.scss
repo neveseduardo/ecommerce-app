@@ -7,8 +7,13 @@
 		left: 0;
 		display: flex;
 		background-color: $white-color;
-		padding: 0 2%;
+		padding: 0 5%;
 		box-shadow: 0 0 2px 5px rgba(0, 0, 0, .1);
+		z-index: 100;
+
+		@media screen and (min-width: 940px) {
+			padding: 0 2%;
+		}
 
 		h1 {
 			font-size: 1.5rem;
@@ -17,10 +22,14 @@
 			margin-bottom: 0;
 			margin: 0;
 			padding: 0;
-
+			color: $primary-color;
 			a:first-of-type {
 				margin-right: 1rem;
 				cursor: pointer;
+			}
+
+			@media screen and (max-width: 940px) {
+				flex: 1;
 			}
 		}
 
@@ -39,7 +48,15 @@
 			.el-input-group__append {
 				width: 40px
 			}
+			.group__append, .el-input-group__prepend {
+				background-color: $white-color;
+			}
+
+			@media screen and (max-width: 940px) {
+				display: none;
+			}
 		}
+
 
 		.list-itens {
 			list-style-type: none;
@@ -50,15 +67,39 @@
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
-
+				
+				
 				a {
 					cursor: pointer;
 					font-size: 1.2rem;
 					display: flex;
 					line-height: 60px;
-					padding: 0 1rem;
+					padding: 0 .3rem;
 					justify-content: center;
 					align-items: center;
+					color: $primary-color;
+					position: relative;
+					
+					span {
+						width: 17px;
+						height: 17px;
+						border-radius: 50%;
+						text-align: center;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						background-color: $danger-color;
+						color: $white-color;
+						font-size: .6rem;
+						position: absolute;
+						top: -10px;
+						left: -5px;
+
+					}
+
+					@media screen and (min-width: 940px) {
+						padding: 0 .5rem;
+					}
 				}
 			}
 		}
@@ -93,6 +134,11 @@
 			form {
 				padding: 1rem 0;
 				margin: 0;
+				display: block;
+
+				@media screen and (min-width: 940px) {
+					display: none;
+				}
 			}
 
 			.el-tabs__nav {
@@ -115,14 +161,13 @@
 
 				li a {
 					line-height: 40px;
+					color: $primary-color;
 
 					svg {
 						width: 40px;
 						text-align: center;
 					}
 				}
-
-				
 			}
 			ul.menu li a {
 				text-transform: uppercase;
@@ -139,6 +184,5 @@
 			-ms-transition: all 300ms ease-in-out;
 			box-shadow: 2px 0 2px rgba(0, 0, 0, .1);
 		}
-
 	}
 }
